@@ -43,3 +43,18 @@ food : true,
 
  ❓ 의문
 * const 는 수정할 수 없는 것이 맞다. 여기서 하는 건 object 안을 수정하는 것이지 object 는 동일하다. const 전체를 하나의 값으로 업데이터 하려고 할 때 에러가 발생한다.
+
+
+### 2.7 Functions part One
+* function : 내가 계속 반복해서 사용할 수 있는 코드 조각
+             어떤 코드를 캡슐화해서 실행을 여러번 할 수 있게 해준다.
+
+* function 선언
+  function 함수명(){
+    실행 코드
+  }
+
+* function 실행 : 함수명();
+  
+* argument(인수)는 function 을 실행하는 동안 정보를 function 에게 보낼 수 있는 방법으로, 소괄호 안에 위치한다.
+
