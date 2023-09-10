@@ -1,9 +1,10 @@
- const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+const player = {
+    name:"nico",
+    points: 10,
+    fat: true,
+};
 
-// Get Item from Array
-console.log(daysOfWeek);
-
-// Add one more day to the array
-daysOfWeek.push("sun");
-
-console.log(daysOfWeek);
+console.log(player);
+player.lastName = "potato";
+player.points = player.points + 15;
+console.log(player);

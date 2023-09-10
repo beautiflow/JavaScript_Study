@@ -19,3 +19,27 @@
 * false : 꺼져있음
 * null : 비어있음
 * undefined : variable 이 메모리에 만들어지고 컴퓨터가 이 variable 에 대해 인지하고 있지만, 값이 없는 것이다.
+
+
+### 2.6 Objects
+* Object : property 를 가진 데이터를 저장하도록 해주며, {} 를 사용한다.
+
+    const player = {
+name : tomato,
+color : red,
+food : true,
+};
+
+* array 와 object 차이
+  * array : 설명이 필요하지 않은 데이터 리스트들
+  * object : 설명이 필요한 정보가 담긴 데이터 리스트들
+
+* property를 불러오는 방법은 2가지
+  1. console.log(player.name); => tomato
+  2. console.log(player["name"]); => tomato
+
+* object 안에 property 를 추가하고 수정하는 것은 가능하다.
+* 하지만 선언된 object 를 바꾸는 것은 불가능하다.
+
+% 의문
+* const 는 수정할 수 없는 것이 맞다. 여기서 하는 건 object 안을 수정하는 것이지 object 는 동일하다. const 전체를 하나의 값으로 업데이터 하려고 할 때 에러가 발생한다.
