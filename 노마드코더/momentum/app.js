@@ -1,30 +1,48 @@
-function sayHello(nameOfPerson, age){
-    console.log("Hello my name is " + nameOfPerson + " and I'm " +age);
-}
-
-sayHello("nico", 10);
-sayHello("dal", 23);
-sayHello("lynn", 21);
-
-function plus(firstNumber, secondNumber){
-    console.log(firstNumber+secondNumber);
-}
-
-function divide(a, b){
-    console.log(a/b);
-}
-
-plus(8, 60);
-divide(98, 20);
-
-
 const player = {
-    name: "nico",
-    sayHello: function(otherPersonsName){
-        console.log("hello " + otherPersonsName + " nice to meet you!");
-    },
+    name: "Nico",
+    age: 98,
 };
 
-console.log(player.name);
-player.sayHello("lynn");
-player.sayHello("nico");
+console.log(player);
+player.name = "nicolas";
+console.log(player);
+player.sexy = "soon";
+console.log(player);
+
+
+function plus(potato, salad){
+    console.log(potato+salad);
+}
+
+plus(5, 10);
+plus(1.33453, 9898);
+plus(9898, 1.33453);
+
+
+// 과제 : 계산기 만들기
+const calculator = {
+    add: function(a, b){
+        console.log(a+b);
+    },
+    minus: function(a, b){
+        console.log(a-b);
+    },
+    multiply: function(a, b){
+        console.log(a*b);
+    },
+    devide: function(a, b){
+        console.log(a/b);
+    },
+    power: function(a, b){
+        console.log(a**b);
+    }
+
+
+
+};
+
+calculator.add(4,2);
+calculator.minus(4,2);
+calculator.multiply(4,2);
+calculator.devide(4,2);
+calculator.power(4,2);
