@@ -58,3 +58,10 @@ food : true,
   
 * argument(인수)는 function 을 실행하는 동안 정보를 function 에게 보낼 수 있는 방법으로, 소괄호 안에 위치한다.
 
+
+### 2.8 Functions part Two
+
+* NaN : Not a Number
+* function 의 괄호 안에 매개변수에서 argument를 받아들일 수 있다.
+* argument는 하나만 받을 수 있는게 아니라 여러 개를 받을 수 있다.
+* function 의 값은 function 안에서만 존재한다.
