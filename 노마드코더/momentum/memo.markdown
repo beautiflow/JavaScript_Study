@@ -1,4 +1,3 @@
-## 230910
 
 ### 2.3 const and let
 * const 와 let 의 차이
@@ -65,3 +64,15 @@ food : true,
 * function 의 괄호 안에 매개변수에서 argument를 받아들일 수 있다.
 * argument는 하나만 받을 수 있는게 아니라 여러 개를 받을 수 있다.
 * function 의 값은 function 안에서만 존재한다.
+
+
+
+### 2.12 Recap
+* return은 말자체로 다시 돌려준다는 의미이다
+* 해당 함수의 변수값을 지정해주면 해당 code 를 안에서 실행해서
+  그 결과를 해당 함수의 변수값을 선언한 변수한테 돌려주는 것이다.
+
+* function 안에서 return 과 추가작업을 입력하면 return 만 작업하고
+  추가 수행은 이뤄지지 않는다.
+  만약 return 앞에 기타 작업이 있다면 그 작업은 수행된다.
+  즉, return 까지만 수행된다.
