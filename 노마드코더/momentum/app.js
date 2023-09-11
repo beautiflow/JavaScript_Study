@@ -1,48 +1,35 @@
-const player = {
-    name: "Nico",
-    age: 98,
-};
-
-console.log(player);
-player.name = "nicolas";
-console.log(player);
-player.sexy = "soon";
-console.log(player);
-
-
-function plus(potato, salad){
-    console.log(potato+salad);
+const age = 96;
+function calculateKrAge(ageOfForeigner){
+    return ageOfForeigner+2;
 }
 
-plus(5, 10);
-plus(1.33453, 9898);
-plus(9898, 1.33453);
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
 
 
 // 과제 : 계산기 만들기
 const calculator = {
     add: function(a, b){
-        console.log(a+b);
+        return a+b;
     },
     minus: function(a, b){
-        console.log(a-b);
+        return a-b;
     },
     multiply: function(a, b){
-        console.log(a*b);
+        return a*b;
     },
     devide: function(a, b){
-        console.log(a/b);
+        return a/b;
     },
     power: function(a, b){
-        console.log(a**b);
+        return a**b;
     }
-
-
-
 };
 
-calculator.add(4,2);
-calculator.minus(4,2);
-calculator.multiply(4,2);
-calculator.devide(4,2);
-calculator.power(4,2);
+
+const plusResult = calculator.add(4,2);
+const minusResult = calculator.minus(4,2);
+const multiplyResult = calculator.multiply(4,2);
+const devideResult = calculator.devide(4,2);
+const powerResult = calculator.power(4,2);
