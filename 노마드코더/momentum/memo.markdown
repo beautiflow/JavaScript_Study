@@ -76,3 +76,12 @@ food : true,
   추가 수행은 이뤄지지 않는다.
   만약 return 앞에 기타 작업이 있다면 그 작업은 수행된다.
   즉, return 까지만 수행된다.
+
+
+  ### 2.13
+  * prompt 는 사용자에게 창을 띄울 수 있도록 하는 역할
+  * type of 는 변수의 type 을 보는 방법이다.
+  * ParseInt() 는 string 을 숫자로 변환하는 역할
+  * NaN = not a number
+  * number 은 크기 비교가 가능하다. string 은 불가능
+  * function 은 내부에서 외부로 실행
