@@ -14,9 +14,15 @@
         select>option:selected{ 
             background-color: blue;
         }
+        p{counter-counter-increment: i;}
+        p::before{content: counter(i) "."; }
+        p::after{content: " - " attr(data-page) "page";}
     </style>
 </head>
 <body>
+    <p>Lorem ipsoum</p>
+
+
         <li class="select"></li>
         <div id="wrap"></div>
 
