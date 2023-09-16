@@ -85,3 +85,17 @@ food : true,
   * NaN = not a number
   * number 은 크기 비교가 가능하다. string 은 불가능
   * function 은 내부에서 외부로 실행
+
+
+### 2.14
+* isNaN은 무언가가 NaN인지 판별하는 방법이다.
+* 결과는 boolean 값으로 보여준다.
+
+* 조건문 식
+  if(condition){
+      // condition === true
+  }
+  else{
+      // condition === false
+  }
+  * 여기서 condition 은 boolean 으로 판별 가능해야 한다.
