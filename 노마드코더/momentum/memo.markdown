@@ -99,3 +99,16 @@ food : true,
       // condition === false
   }
   * 여기서 condition 은 boolean 으로 판별 가능해야 한다.
+
+
+
+### 2. 15
+* true || true === true
+* false || true === true
+* true || false === true
+* false || false === false
+
+* true && true === true
+* false && true === false
+* true && false === false
+* false && false === false
