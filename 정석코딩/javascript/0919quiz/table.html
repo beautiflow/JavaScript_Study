@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="bingo" border="2"></table>
+
+        <script>
+        // 배열 생성
+        var arr = [];
+
+        for(x=0; x<5; x++){
+            arr[x] = new Array(5);
+        }
+
+        // 숫자 섞기
+        for(i = 0; i < 25; i++){ 
+            arr[i] = i+1;
+        }   
+        
+        arr.sort((a,b) => Math.random()-0.5);
+
+        // 배열 출력
+        var table = document.getElementById("bingo");
+
+        var tmp = "";
+        for(i = 0; i < 5; i++){
+            tmp += "<tr>";
+            for(j = 0 ; j < 5; j++){
+                tmp += "<td>" + arr[5*i+j]+ "</td>";
+            }
+            tmp += "</tr>";
+        }
+        
+        // HTML 에 표 넣기
+        table.innerHTML = tmp;
+
+        </script>
+    
+</body>
+</html>
