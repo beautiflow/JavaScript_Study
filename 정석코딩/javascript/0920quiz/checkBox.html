@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <!--checkbox로 항목 만들기--> 
+    <form>
+        <input type="checkbox" name="total" onclick="selectAll()"/>전체 <br>
+        <input type="checkbox" name="sports" value="농구" onclick="inputbox()"/>농구 <br>
+        <input type="checkbox" name="sports" value="배구" onclick="inputbox()"/>배구 <br>
+        <input type="checkbox" name="sports" value="야구" onclick="inputbox()"/>야구 <br>
+        <input type="checkbox" name="sports" value="축구" onclick="inputbox()"/>축구 <br>
+
+    </form>
+
+    <!--입력 칸 만들기--> 
+    <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+
+    <script>
+        // 하나씩 체크하면 textarea 에 입력되는 함수
+        function inputbox(){
+            var total = document.getElementsByName("total");
+            var inputbox = document.getElementsByName('sports');
+            var input = [];
+
+            for(i = 0; i < inputbox.length; i++){
+                if(inputbox[i].checked){
+                    input.push(inputbox[i].value);
+                }
+
+            // 부분 취소할 경우 전체 checkbox 해제
+            if(inputbox[i].checked == false){
+                total[0].checked = false;
+                input.pop(inputbox[i].value);
+
+                document.querySelector("textarea").innerHTML = input;
+                        }
+            }
+            document.querySelector("textarea").innerHTML = input;
+        }
+
+        // 전체 checkbox 체크하면 모든 항목이 선택되고 모든 항목이 textarea 에 입력되는 함수
+        function selectAll(){
+            var total = document.getElementsByName("total");
+            var checkboxes = document.getElementsByName("sports");
+            var allCheck = []; 
+
+            if(total[0].checked){
+                for(i = 0; i < checkboxes.length; i++){
+                    document.getElementsByName("sports")[i].checked = true;
+                    allCheck.push(checkboxes[i].value);
+                    }
+                    document.querySelector("textarea").innerHTML = allCheck;
+                }
+                else{
+                for(i = 0; i < checkboxes.length; i++){
+                    document.getElementsByName("sports")[i].checked = false;
+                    allCheck.pop(checkboxes[i].value);
+                }
+                document.querySelector("textarea").innerHTML = allCheck;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
