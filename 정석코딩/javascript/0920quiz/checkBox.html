@@ -33,15 +33,14 @@
                     input.push(inputbox[i].value);
                 }
 
-            // 부분 취소할 경우 전체 checkbox 해제
+             // 부분 취소할 경우 전체 checkbox 해제
             if(inputbox[i].checked == false){
                 total[0].checked = false;
-                input.pop(inputbox[i].value);
-
-                document.querySelector("textarea").innerHTML = input;
-                        }
+                }
             }
+
             document.querySelector("textarea").innerHTML = input;
+
         }
 
         // 전체 checkbox 체크하면 모든 항목이 선택되고 모든 항목이 textarea 에 입력되는 함수
@@ -58,6 +57,7 @@
                     document.querySelector("textarea").innerHTML = allCheck;
                 }
                 else{
+                // 전체 checked 가 false 일 경우 모든 항목 제거
                 for(i = 0; i < checkboxes.length; i++){
                     document.getElementsByName("sports")[i].checked = false;
                     allCheck.pop(checkboxes[i].value);
