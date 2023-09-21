@@ -8,7 +8,7 @@
 <body>
     <!--왼쪽 항목-->
     <div style="float: left; width: 5%; padding:10px;">
-        <select multiple="multiple" style="width: 40px; height: 80px;" name="" id="leftList">
+        <select multiple="multiple" style="width: 50px; height: 80px;" name="" id="leftList">
             <option value="농구">농구</option>
             <option value="배구">배구</option>
             <option value="야구">야구</option>
@@ -28,17 +28,17 @@
 
     <!--오른쪽 항목-->
     <div style="float: left; width: 5%; padding:10px;">
-        <select multiple="multiple" style="width: 40px; height: 80px;" name="" id="rightList">
+        <select multiple="multiple" style="width: 50px; height: 80px;" name="" id="rightList">
             
         </select>
     </div>
 
     <script>
+        var leftList = document.getElementById("leftList");
+        var rightList = document.getElementById("rightList");
+
         // ">" 버튼 눌렀을 경우 선택된 항목이 오른쪽 칸으로 이동하기
         function rightToMoving(){
-            var leftList = document.getElementById("leftList");
-            var rightList = document.getElementById("rightList");
-
             for (var i = 0; i < leftList.length; i++){
                 if (leftList[i].selected){
                     rightList.add(leftList[i]);
@@ -48,33 +48,22 @@
 
         // "<" 버튼 눌렀을 경우 선택된 항목이 왼쪽 칸으로 이동하기
         function leftToMoving(){
-            var leftList = document.getElementById("leftList");
-            var rightList = document.getElementById("rightList");
-
             for(var i = 0; i < rightList.length; i++){
-                if (leftList[i].selected){
-                leftList.add(rightList[0]);
+                if (rightList[i].selected){
+                    leftList.add(rightList[0]);
                 }
             }
         }
 
-
         // ">>" 버튼 눌렀을 경우 모든 항목이 오른쪽 칸으로 이동하기
         function AllRightToMoving(){
-            var leftList = document.getElementById("leftList");
-            var rightList = document.getElementById("rightList");
-
             while(leftList.length > 0 ){
                 rightList.add(leftList[0]);
             }
         }
 
-
         // "<<" 버튼 눌렀을 경우 모든 항목이 왼쪽 칸으로 이동하기
         function AllLeftToMoving(){
-            var leftList = document.getElementById("leftList");
-            var rightList = document.getElementById("rightList");
-
             while(rightList.length > 0){
                 leftList.add(rightList[0]);
             }

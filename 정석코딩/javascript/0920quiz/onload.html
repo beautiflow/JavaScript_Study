@@ -25,52 +25,63 @@
     </div>
 
     <script>
-        // html 에서 요소 가져오기
-        var total = document.getElementsByName("total");
-        var sportsBox = document.getElementsByName("sports");
 
-        // 하나씩 체크하면 textarea 에 입력되는 함수
-        function inputbox(){
+        // 하나씩 체크하면서 textarea 에 입력되는 함수
+        window.onload = function(){
+        
+            // html 에서 요소 가져오기
+            var total = document.getElementsByName("total");
+            var inputbox = document.getElementsByName('sports');
+            var input = [];
             var count = 0;
-            var box = [];
 
-            for(i = 0; i < sportsBox.length; i++){
-                if(sportsBox[i].checked){
-                    box.push(sportsBox[i].value);
+            for(i = 0; i < inputbox.length; i++){
+                if(inputbox[i].checked){
+                    input.push(inputbox[i].value);
+
                     // 모든 항목이 다 선택되었을 때 전체 checkbox 체크하기
                     count++;
-                    if(count == sportsBox.length){
+                    if(count == inputbox.length){
                     total[0].checked = true;
                     }
                 }
 
                 // 부분 취소할 경우 전체 checkbox 해제
-                if(sportsBox[i].checked == false){
+                if(inputbox[i].checked == false){
                     total[0].checked = false;
-                }
+                    }
             }
-            document.getElementById("textarea").innerHTML = box;
+            document.getElementById("textarea").innerHTML = input;
         }
 
-        // 전체 checkbox 체크하면 모든 항목이 선택되고 모든 항목이 textarea 에 입력되는 함수
+        window.addEventListener('load', function(){
+            // 전체 checkbox 체크하면 모든 항목이 선택되고 모든 항목이 textarea 에 입력되는 함수
         function selectAll(){
-            var box = [];
+            var total = document.getElementsByName("total");
+            var checkboxes = document.getElementsByName("sports");
+            var allCheck = []; 
 
             // 전체 체크가 true 이면 모든 항목들 다 체크 후 박스에 넣기
-            for(i = 0; i < sportsBox.length; i++){
-                if(total[0].checked){
-                    document.getElementsByName("sports")[i].checked = true;
-                    box.push(sportsBox[i].value);
-                    document.getElementById("textarea").innerHTML = box;
+            if(total[0].checked){
+                for(i = 0; i < checkboxes.length; i++){
+                        document.getElementsByName("sports")[i].checked = true;
+                        allCheck.push(checkboxes[i].value);
+                    }
+                    document.getElementById("textarea").innerHTML = allCheck;
                 }
                 // 전체 checked 가 false 일 경우 모든 항목 제거
                 else{
-                    document.getElementsByName("sports")[i].checked = false;
-                    box.pop(sportsBox[i].value);
-                    document.getElementById("textarea").innerHTML = box;
-                }
+                    for(i = 0; i < checkboxes.length; i++){
+                        document.getElementsByName("sports")[i].checked = false;
+                        allCheck.pop(checkboxes[i].value);
+                    }
+                document.getElementById("textarea").innerHTML = allCheck;
             }
         }
+        });
+        
+
+        
     </script>
 </body>
 </html>
