@@ -120,3 +120,9 @@ food : true,
 * JS 에서 HTML document 객체로부터 title 을 가져올 수 있다.
 * JS 는 HTML 에 접근하고 읽을 수 있게 설정되어 있다.
 * 또한 JS 를 통해 HTML 을 바꿀 수 있다.
+
+
+### 3.1
+* document 라는 객체는 JS 에서 HTML 파일을 불러올 수 있도록 도와준다.
+* document 의 함수중에는 getElementById 라는 함수가 있는데, 이 함수가 HTML 에서 id 를 통해 element 를 찾아준다.
+  ex) document.getElementById("idName");
