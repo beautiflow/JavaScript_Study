@@ -112,3 +112,11 @@ food : true,
 * false && true === false
 * true && false === false
 * false && false === false
+
+
+### 3.0
+* console 에 document 를 입력하면, 작성한 HTML 을 가져올 수 있다.
+* document 는 브라우저에 존재하는 object console 에 console.dir(document) 를 호출해보면, document.title 이 HTML 에서 정의한 title 과 같다.
+* JS 에서 HTML document 객체로부터 title 을 가져올 수 있다.
+* JS 는 HTML 에 접근하고 읽을 수 있게 설정되어 있다.
+* 또한 JS 를 통해 HTML 을 바꿀 수 있다.
