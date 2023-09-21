@@ -176,3 +176,10 @@ food : true,
 * document 에서 body, head, title 은 중요해서 언제든 'document.body' 로 가져올 수 있지만
   div 나 h1 등 element 들은 querySelector getElementById 등으로 찾아야한다.
   ex) document.querySelector("h1");
+
+
+
+  ### 3.6
+  1. element 찾기
+  2. event 를 listen
+  3. 그 event 에 반응하기
