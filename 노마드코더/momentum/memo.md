@@ -126,3 +126,12 @@ food : true,
 * document 라는 객체는 JS 에서 HTML 파일을 불러올 수 있도록 도와준다.
 * document 의 함수중에는 getElementById 라는 함수가 있는데, 이 함수가 HTML 에서 id 를 통해 element 를 찾아준다.
   ex) document.getElementById("idName");
+
+
+
+### 3.2
+* JS 로 HTML 을 호출하는 방법들은 대게 코드를 사용해서 불러올 수 있다.
+  - getElementById() : 해당 아이디 하나만 불러올 수 있다.
+  - getElementByClassName() : 해당 클래스이름으로 불러올 수 있으며, 동일 요소가 있을 시 배열 형태를 보여준다.
+  - getElementByTag() : 해당 태그를 불러올 수 있으며, 중복요소가 있으면, 배열 형태로 나타낸다.
+  - queryselect/querySelectAll : 해당 태그 및 아이디 클래스명에 속한 요소들을 콜링할 수 있으며 중복요소가 많을 시 queryselect 는 첫번째 요소만, querySelectAll 은 모든 조건들을 보여준다.
