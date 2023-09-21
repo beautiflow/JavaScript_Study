@@ -135,3 +135,15 @@ food : true,
   - getElementByClassName() : 해당 클래스이름으로 불러올 수 있으며, 동일 요소가 있을 시 배열 형태를 보여준다.
   - getElementByTag() : 해당 태그를 불러올 수 있으며, 중복요소가 있으면, 배열 형태로 나타낸다.
   - queryselect/querySelectAll : 해당 태그 및 아이디 클래스명에 속한 요소들을 콜링할 수 있으며 중복요소가 많을 시 queryselect 는 첫번째 요소만, querySelectAll 은 모든 조건들을 보여준다.
+
+
+
+### 3.3
+* 우리가 JavaScript 를 이용해서 html 을 변경할 수 있는 이유는 html body 태그안에 script 를 이용해서 javascript 와 연결해주기 때문이다. 이것으로 인해 document 가 존재할 수 있다.
+* element 내부를 보기 위해서는 console.dir() 을 사용하면 되고, 이는 객체로 표현된다.
+* element 중 on 이 붙은 것은 event 이다.
+  * event 란 우리가 마우스를 클릭하거나, 키보드를 치거나 하는 어떤 행위들을 말하는 것이다.
+
+  * title.addEventListener("click", 함수) : 누군가 title 을 click 하는 것을 할 것이다.
+    * 첫번째 인자에는 원하는 이벤트를, 두번째 인자에는 하고 싶은 행동을 넣으면 된다.
+    * 함수자리에는 함수의 실행을 담당하는 괄호를 넣지 않아야한다. 자바스크립트가 대신 함수의 실행을 담당하기 때문이다.
