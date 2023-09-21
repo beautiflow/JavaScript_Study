@@ -147,3 +147,19 @@ food : true,
   * title.addEventListener("click", 함수) : 누군가 title 을 click 하는 것을 할 것이다.
     * 첫번째 인자에는 원하는 이벤트를, 두번째 인자에는 하고 싶은 행동을 넣으면 된다.
     * 함수자리에는 함수의 실행을 담당하는 괄호를 넣지 않아야한다. 자바스크립트가 대신 함수의 실행을 담당하기 때문이다.
+
+
+
+### 3.4
+* 000.addEventListener("", functionName);
+  * listen 하고 싶은 event 찾는 방법
+    1. 구글에 찾고 싶은 element 의 이름 검색하기
+       ex) h1 html element mdn(mozilla developer network)
+    2. 그 중에서 web APIs 가 포함된 페이지 찾기(JS 관점에서 HTML heading element 란 의미)
+
+    * console.dir 을 통해서 element 를 console 에 출력시키기
+    * console.dir(title); <= 여기서도 사용가능한 event 를 찾을 수 있다.
+    * property 이름 앞에 on 이 있다면 그게 바로 eventlistener 이다
+    * 사용할 땐 on을 빼고 사용하면 된다.
+
+* style 은 CSS 를 통해서 변경되어야 한다.
