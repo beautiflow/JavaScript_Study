@@ -163,3 +163,16 @@ food : true,
     * 사용할 땐 on을 빼고 사용하면 된다.
 
 * style 은 CSS 를 통해서 변경되어야 한다.
+
+
+
+### 3.5
+* event 를 사용하는 두 가지 방법
+    1. title.addEventListener("click", handleTitleClick);
+    2. title.onClick = handleTitleClick;
+
+    * 위에 두 코드 모두 동일하나 addEventListener를 선호하는 이유는 removeEventListener 을 통해서 event listener 을 제거할 수 있기 때문이다.
+
+* document 에서 body, head, title 은 중요해서 언제든 'document.body' 로 가져올 수 있지만
+  div 나 h1 등 element 들은 querySelector getElementById 등으로 찾아야한다.
+  ex) document.querySelector("h1");
