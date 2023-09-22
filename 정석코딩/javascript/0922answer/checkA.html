@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" value="all">전체
+    <input type="checkbox" value="야구">야구
+    <input type="checkbox" value="농구">농구
+    <input type="checkbox" value="배구">배구
+    <input type="checkbox" value="축구">축구
+    <textarea name="" id="result" cols="30" rows="10"></textarea>
+
+    <script>
+
+        function displayCheckedValues(arr){
+            var tmp = '';
+            
+            for(i = 0; i < arr.length; i++){
+                tmp += arr[i].value;
+            }
+
+            var ta = document.getElementById("result");
+            ta.value = tmp;
+        }
+
+        function checkboxClick(e){
+            // 전체인 경우, 모든체크박스를 체크 또는 해제
+            var inputArr = document.getElementsByTagName("input");
+
+            console.dir(e);
+
+            if(inputArr[0] === e.target)
+            for(i = 0 ;i<inputArr.length; i++){
+                inputArr[i].checked = inputArr[0].checked;
+            }
+
+            // 체크된 항목의 값을 textarea 에 보여준다
+            displayCheckedValues(inputArr);
+        }
+
+
+        window.onload = function(){
+            
+            // 1. 요소에 접근
+            var inputArr = document.getElementsByTagName("input");
+
+            // 2. 이벤트 등록
+            for(i = 0; i < inputArr.length; i++){
+                inputArr[i].onclick = checkboxClick;
+            }
+
+        }
+    </script>
+</body>
+</html>
