@@ -183,3 +183,13 @@ food : true,
   1. element 찾기
   2. event 를 listen
   3. 그 event 에 반응하기
+
+
+
+### 3.7
+* style 작업에 적합한 도구는 CSS
+* animation 에 적합한 도구는 JS
+* html 파일은 CSS 문서와 JS 문서를 import 하고 있다.
+
+* 에러를 줄이기위해 raw string 을 쓰는 대신 const 를 생성하자
+* JS 로 모든 class name 을 변경하지 않는다.
