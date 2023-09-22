@@ -29,10 +29,27 @@
         var total = document.getElementsByName("total");
         var sportsBox = document.getElementsByName("sports");
 
+        widow.onload = ()=>{
+            inputbox();
+            selectAll();
+        }
+
+        widow.onload = function(){
+            inputbox();
+            selectAll();
+        }
+
+        const a = new inputbox();
+
+        
+        a.c
+
         // 하나씩 체크하면 textarea 에 입력되는 함수
         function inputbox(){
             var count = 0;
             var box = [];
+
+            this.c = 1;
 
             for(i = 0; i < sportsBox.length; i++){
                 if(sportsBox[i].checked){

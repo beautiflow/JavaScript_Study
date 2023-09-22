@@ -37,6 +37,13 @@
         var leftList = document.getElementById("leftList");
         var rightList = document.getElementById("rightList");
 
+        window.onload = function(){
+            rightToMoving();
+            leftToMoving();
+            AllRightToMoving();
+            AllLeftToMoving()
+        }
+
         // ">" 버튼 눌렀을 경우 선택된 항목이 오른쪽 칸으로 이동하기
         function rightToMoving(){
             for (var i = 0; i < leftList.length; i++){
