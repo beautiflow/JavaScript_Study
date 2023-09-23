@@ -193,3 +193,31 @@ food : true,
 
 * 에러를 줄이기위해 raw string 을 쓰는 대신 const 를 생성하자
 * JS 로 모든 class name 을 변경하지 않는다.
+
+
+
+### 3.8
+* classList 는 우리가 class 들의 목록으로 작업할 수 있게끔 허용해준다.
+* className 은 이전 class 를 상관하지 않고 모든 것을 교체해버린다.
+  
+* 그래서 classList 를 사용한다. class 를 목록으로 작업할 수 있게끔 허용한다. classList 를 이용하는 건 element 의 class 내용물을 조작하는 것을 허용한다는 뜻이다. 
+  * classList 에는 멋진 function 이 있다
+  * contains() : 우리가 명시한 class 가 HTML element 의 class 에 포함되어 있는지를 말해준다.
+  * remove() : 명시한 class name 을 제거한다.
+  * add() : 명시한 class name 을 추가한다.
+  * function handleTitleClick() {
+        const clickedClass = "clicked";
+        if(h1.classList.contains(clickedClass)) {
+            h1.classList.remove(clickedClass);
+        } else {
+            h1.classList.add(clickedClass);
+            }
+          }
+
+* 이 보다 더 좋은 function() 이 존재한다.
+  * toggle() : class name 이 존재하는지 확인
+  * class name 이 존재하면 toggle 은 class name 을 제거하고, class name 이 존재하지 않으면 toggle 은 class name 을 추가한다.
+  * function handleTitleClick() {
+        h1.classList.toggle("clicked");
+      }
+  * 한번만 적기 때문에 const 도 필요 없다. toggle 은 버튼 같은 것. 켜고 끄고
