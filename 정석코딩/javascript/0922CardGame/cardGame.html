@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    img{
+        width: 100px;
+        height: 150px;
+    }
+</style>
+</head>
+<body>
+    <form>
+        <button type="button" onclick="show()">reset</button> 
+        <button type="button" onclick="hide()">hide</button> 
+        <button type="button" onclick="shuffle()">shuffle</button> 
+        <button type="button" onclick="cardOpen()">open</button> 
+        <br>
+    </form>
+    <br>
+    <img src="card_img/0.png" id="0" value="red" width=100; height=150;  alt="">
+    <img src="card_img/1.png" id="1" value="red" width=100; height=150;  alt="">
+    <img src="card_img/2.png" id="2" value="red" width=100; height=150;  alt="">
+    <img src="card_img/3.png" id="3"value="red" width=100; height=150;  alt="">
+    <img src="card_img/4.png" id="4" value="red" width=100; height=150;  alt="">
+    <img src="card_img/5.png" id="5" value="red" width=100; height=150;  alt="">
+    <img src="card_img/6.png" id="6" value="red" width=100; height=150;  alt="">
+    <img src="card_img/7.png" id="7" value="red" width=100; height=150;  alt="">
+    <img src="card_img/8.png" id="8" value="red" width=100; height=150;  alt="">
+    <img src="card_img/9.png" id="9" value="red" width=100; height=150;  alt="">
+    <img src="card_img/10.png" id="10" value="red"  width=100; height=150;  alt="">
+    <img src="card_img/11.png" id="11" value="red"  width=100; height=150;  alt="">
+    <img src="card_img/12.png" id="12" value="red"  width=100; height=150;  alt="">
+    <img src="card_img/13.png" id="13" value="black" width=100; height=150;  alt="">
+    <img src="card_img/14.png" id="14" value="black" width=100; height=150;  alt="">
+    <img src="card_img/15.png" id="15" value="black" width=100; height=150;  alt="">
+    <img src="card_img/16.png" id="16" value="black" width=100; height=150;  alt="">
+    <img src="card_img/17.png" id="17" value="black" width=100; height=150;  alt="">
+    <img src="card_img/18.png" id="18" value="black" width=100; height=150;  alt="">
+    <img src="card_img/19.png" id="19" value="black" width=100; height=150;  alt="">
+    <img src="card_img/20.png" id="20" value="black" width=100; height=150;  alt="">
+    <img src="card_img/21.png" id="21" value="black" width=100; height=150;  alt="">
+    <img src="card_img/22.png" id="22" value="black" width=100; height=150;  alt="">
+    <img src="card_img/23.png" id="23" value="black" width=100; height=150;  alt="">
+    <img src="card_img/24.png" id="24" value="black" width=100; height=150;  alt="">
+    <img src="card_img/25.png" id="25" value="black" width=100; height=150;  alt="">
+    <img src="card_img/26.png" id="26" value="red" width=100; height=150;  alt="">
+    <img src="card_img/27.png" id="27" value="red" width=100; height=150;  alt="">
+    <img src="card_img/28.png" id="28" value="red" width=100; height=150;  alt="">
+    <img src="card_img/29.png" id="29" value="red" width=100; height=150;  alt="">
+    <img src="card_img/30.png" id="30" value="red" width=100; height=150;  alt="">
+    <img src="card_img/31.png" id="31" value="red" width=100; height=150;  alt="">
+    <img src="card_img/32.png" id="32" value="red" width=100; height=150;  alt="">
+    <img src="card_img/33.png" id="33" value="red" width=100; height=150;  alt="">
+    <img src="card_img/34.png" id="34" value="red" width=100; height=150;  alt="">
+    <img src="card_img/35.png" id="35" value="red" width=100; height=150;  alt="">
+    <img src="card_img/36.png" id="36" value="red" width=100; height=150;  alt="">
+    <img src="card_img/37.png" id="37" value="red" width=100; height=150;  alt="">
+    <img src="card_img/38.png" id="38" value="red" width=100; height=150;  alt="">
+    <img src="card_img/39.png" id="39" value="black" width=100; height=150;  alt="">
+    <img src="card_img/40.png" id="40" value="black" width=100; height=150;  alt="">
+    <img src="card_img/41.png" id="41" value="black" width=100; height=150;  alt="">
+    <img src="card_img/42.png" id="42" value="black" width=100; height=150;  alt="">
+    <img src="card_img/43.png" id="43" value="black" width=100; height=150;  alt="">
+    <img src="card_img/44.png" id="44" value="black" width=100; height=150;  alt="">
+    <img src="card_img/45.png" id="45" value="black" width=100; height=150;  alt="">
+    <img src="card_img/46.png" id="46" value="black" width=100; height=150;  alt="">
+    <img src="card_img/47.png" id="47" value="black" width=100; height=150;  alt="">
+    <img src="card_img/48.png" id="48" value="black" width=100; height=150;  alt="">
+    <img src="card_img/49.png" id="49" value="black" width=100; height=150;  alt="">
+    <img src="card_img/50.png" id="50" value="black" width=100; height=150;  alt="">
+    <img src="card_img/51.png" id="51" value="black" width=100; height=150;  alt="">
+
+    <script>
+
+        // 요소 받아오기
+        let cards = document.getElementsByTagName("img");
+        let cardFront = [];
+        const CARDBACKURL = "http://www.matcl.com/files/attach/images/8400/218/140/001/f5b3c232778f682b65583c7748cc2e64.png"
+        const getCardUrl = (id) => `card_img/${id}.png`
+        let selectedCardId = null;
+        let score = 0;
+
+        for (let i = 0 ; i < cards.length; i++) {
+            cards[i].addEventListener('click', click);
+            cardFront[i] = cards[i].src;
+        }
+
+        // show 버튼 누르면 초기 카드화면으로 
+        function show(){
+            for(i = 0; i < cards.length; i++){
+                cards[i].src = getCardUrl(i);
+                cardFront[i] = cards[i].src;
+            }
+        }
+
+        // shuffle 하고 hide 한 후에 뒤집기 - shuffle 된 값 그대로 ,,, 
+        function cardOpen(){
+            for(i = 0; i < cards.length; i++) cards[i].src = cardFront[i];
+        }
+        
+
+        // hide 버튼 누르면 모든 카드 다 뒷면으로 뒤집기
+        function hide() {
+            // 카드 이미지 앞에서 뒤로 변경하기
+            for(i = 0; i < cards.length; i++) 
+                cards[i].src = CARDBACKURL;
+        }
+
+        // shuffle 버튼 누르면 모든 카드 섞이기
+        function shuffle(){
+            let arr = [];
+
+            for (let i = 0 ; i < cards.length; i++) arr[i] = getCardUrl(i);
+
+            // 배열 섞기 
+            arr.sort(() => Math.random() - 0.5);
+            cardFront = arr.map((url) => url);
+
+            // 앞 카드에 넣기
+            for(i = 0; i < cards.length;i++) cards[i].src = arr[i];
+        }
+
+        // 카드 비교하기, 뒤집기 구현
+        function click(e) {
+            const card = document.getElementById(e.target.id);
+            if (card.src === CARDBACKURL && !selectedCardId) {
+                card.src = cardFront[e.target.id];
+                selectedCardId = e.target.id;
+            }
+            else if (card.src === CARDBACKURL && selectedCardId) {
+                if (!isCorrect(e.target.id, selectedCardId)) {
+                    card.src = cardFront[e.target.id];
+                    setTimeout(() => {
+                        card.src = CARDBACKURL;
+                        cards[selectedCardId].src = CARDBACKURL;
+                        selectedCardId = null;
+                    }, 1000);
+                }
+                else {
+                    card.src = cardFront[e.target.id];
+                    score += 100;
+                    alert(score + "점을 획득했습니다.");
+                    selectedCardId = null;
+
+                    gameOver();   
+                }
+            }
+        }
+
+        const isCorrect = (card1, card2) => card1 % 13 == card2 % 13 && Math.abs(Math.floor(card1 / 13) - Math.floor(card2 / 13)) === 1 
+
+        function gameOver(){
+            if(score === 2600){
+                alert("모든 카드를 다 맞췄습니다. 성공하셨습니다. 축하드립니다.");
+                setTimeout(() => {
+                        show();
+                    }, 10000);
+            }
+        }
+        
+
+
+// event.target.id
+    </script>
+    
+
+
+</body>
+</html>
