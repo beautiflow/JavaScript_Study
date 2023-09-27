@@ -221,3 +221,9 @@ food : true,
         h1.classList.toggle("clicked");
       }
   * 한번만 적기 때문에 const 도 필요 없다. toggle 은 버튼 같은 것. 켜고 끄고
+
+
+
+### 4.0 Input Values
+* querySelector 로 id 태그를 쓸 때는 # 을 써야한다.
+* 하지만 getElementById 로 id 를 쓸 땐 # 을 쓰지 않아도 된다.
