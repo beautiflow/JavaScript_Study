@@ -234,4 +234,26 @@ food : true,
 * form 안에 속성에는 required(필수), maxlength, type, placeholder 등이 있다.
 * input 밖을 form 으로 감싸면 따로 조건문을 주지 않아도 html 이 최대길이, 빈칸 등을 잡아준다.
 * 문제는 버튼을 클릭할 때 자동으로 submit (새로고침)이 된다는 것이다. 
-* 다음 장에서 해결 
+* 다음 장에서 해결
+
+
+
+### 4.2 Events
+* function onLoginSubmit(event){
+    event.preventDefault(); // 브라우저가 기본 동작을 실행하지 못하게 막기
+                            // event object 는 preventDefault 함수를 기본적으로 가지고 있음
+    console.log(event);
+  }
+
+* loginForm.addEventListener("submit", onLoginSubmit);
+  // submit 이벤트가 발생한다면, onLoninSubmit 함수를 실행시킨다는 의미
+  // JS 는 onLoginSubmit 함수 호출시 인자를 담아서 호출함. 해당 인자는 event object 를 담은 정보들
+
+* 중요!!
+  * form 을 submit 하면 브라우저는 기본적으로 페이지를 새로고침하도록 되어 있다.
+    (우리가 원하는 것이 아니다.)
+  * preventDefault() 함수를 추가함으로써 브라우저의 기본 동작을 막을 수 있다.
+    * 이 preventDefault() 함수는 EventListner 함수의 '첫번째 argument' 안에 있는 함수이다.
+    * 첫 argument 는 지금 막 벌어진 event 들에 대한 정보를 가지고 있다.
+    * JS 는 (기본적으로) argument 를 담아서 함수를 호출하는데, 이 argument 가 기본정보들을 제공하고 있다.
+      ex) 누가 submit 의 주체인지, 몇 시에 submit 을 했는지 등등 콘솔에 출력해보면 알 수 있다.
