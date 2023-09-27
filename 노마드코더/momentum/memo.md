@@ -285,3 +285,18 @@ food : true,
   * hidden 되었던 A 문구가 나타난다
     - remove hidden
   * A 문구와 username 을 합쳐서 완전한 문구를 완성한다. 
+
+
+
+
+### 4.5 Saving Username
+* localStorage : 브라우저에 무언가를 저장한 후 나중에 가져올 수 있음
+
+* localStorage.setItem("username", username);
+
+* localStorage.setItem(key, value);
+  : 로컬 저장소에 해당 키와 값을 저장함
+* localStorage.getItem(key);
+  : 로컬 저장소에 해당 키와 해당되는 값을 불러옴
+* localStorage.removeItem(key);
+  : 로컬 저장소에 해당 키에 해당되는 키, 값을 삭제함
