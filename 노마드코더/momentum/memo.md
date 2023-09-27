@@ -257,3 +257,11 @@ food : true,
     * 첫 argument 는 지금 막 벌어진 event 들에 대한 정보를 가지고 있다.
     * JS 는 (기본적으로) argument 를 담아서 함수를 호출하는데, 이 argument 가 기본정보들을 제공하고 있다.
       ex) 누가 submit 의 주체인지, 몇 시에 submit 을 했는지 등등 콘솔에 출력해보면 알 수 있다.
+
+
+
+### 4.3 Events part Two
+* addEventListener 에 function 을 주게되면, event 가 일어났을 때, 그 function 을 JS 가 실행시킴
+* 이때 js 는 addEventListener 에 따라 단순히 function 을 실행시키는 것에 더하여 그 function 의 첫번째 인자로 직전에 발생된 event 에 대한 정보를 object 형태로 넣어준다.
+* 또한 이 과정을 통해서 발생한 첫번째 인자는 객체이고, 그 객체값 중 하나로 preventDefault() 함수가 있다.
+* 이 preventDefault() 함수는 자동실행이 되는 것을 막아주므로 event.preventDefault() 같은 식으로 코드를 작성하면, 자동실행을 막아줌
