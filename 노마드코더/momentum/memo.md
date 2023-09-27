@@ -265,3 +265,23 @@ food : true,
 * 이때 js 는 addEventListener 에 따라 단순히 function 을 실행시키는 것에 더하여 그 function 의 첫번째 인자로 직전에 발생된 event 에 대한 정보를 object 형태로 넣어준다.
 * 또한 이 과정을 통해서 발생한 첫번째 인자는 객체이고, 그 객체값 중 하나로 preventDefault() 함수가 있다.
 * 이 preventDefault() 함수는 자동실행이 되는 것을 막아주므로 event.preventDefault() 같은 식으로 코드를 작성하면, 자동실행을 막아줌
+
+
+
+### 4.4 Getting Username
+* const HIDDEN_CLASSNAME = 'hidden';
+  : 관습 - string 만 포함된 변수는 대문자로 쓴다 + 중요한 변수가 아니라서
+
+* 'hello!' + username; 은 `hello ${username};  `` 과 같으며 후자의 방법을 추천한다.
+
+* HTML 의 어느 한 부분을 잡고 거기에 class 를 추가하거나 빼고 싶을 때는 classList.add('classname'), classList.remove('classname') 를 사용한다.
+* 클래스를 마음대로 붙였다 뗄 수 있게 해준다. 위에서는 display:none; 이 되어있기 때문에 해당 html 태그를 hide or show 할 수 있다.
+
+* 오늘 강의
+  * 클릭하면 자동으로 새로고침되어 정보가 날아가는 것을 막는 것
+    - preventDefault();
+  * loginForm 을 감춘다
+    - hidden
+  * hidden 되었던 A 문구가 나타난다
+    - remove hidden
+  * A 문구와 username 을 합쳐서 완전한 문구를 완성한다. 
