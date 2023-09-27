@@ -227,3 +227,11 @@ food : true,
 ### 4.0 Input Values
 * querySelector 로 id 태그를 쓸 때는 # 을 써야한다.
 * 하지만 getElementById 로 id 를 쓸 땐 # 을 쓰지 않아도 된다.
+
+
+
+### 4.1 Form Submission
+* form 안에 속성에는 required(필수), maxlength, type, placeholder 등이 있다.
+* input 밖을 form 으로 감싸면 따로 조건문을 주지 않아도 html 이 최대길이, 빈칸 등을 잡아준다.
+* 문제는 버튼을 클릭할 때 자동으로 submit (새로고침)이 된다는 것이다. 
+* 다음 장에서 해결 
