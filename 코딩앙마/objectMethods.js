@@ -31,3 +31,5 @@ let arr = [
 
 const day = Object.fromEntries(arr);
 console.log(day);
+
+console.log(" ");
