@@ -52,3 +52,5 @@ function hasColaIn(str){
 hasColaIn("와 사이다가 짱이야!");  
 hasColaIn("무슨소리, 콜라가 최고");
 hasColaIn("콜라"); 
+
+console.log(" ");
