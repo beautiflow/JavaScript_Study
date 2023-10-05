@@ -145,3 +145,5 @@ console.log(typeof userList2);
 
 console.log(Array.isArray(user4));
 console.log(Array.isArray(userList2));
+
+console.log(" ");
