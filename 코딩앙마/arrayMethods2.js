@@ -44,3 +44,5 @@ let result11 = userList3.reduce((prev, cur) => {
 }, []);
 
 console.log(result11); 
+
+console.log(" ");
