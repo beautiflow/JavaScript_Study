@@ -29,3 +29,5 @@ class BmwC extends CarC{
 }
 
 // const z4C = new BmwC("bule");
+
+console.log(" ");

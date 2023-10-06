@@ -29,3 +29,5 @@ class Userr2 {
 }
 
 const tomC = new Userr2("Tom", 19);
+
+console.log(" ");
