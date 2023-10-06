@@ -30,3 +30,5 @@ console.log(mike);
 
 update.call(tom, 2002, "teacher");
 console.log(tom);
+
+console.log(" ");
