@@ -9,7 +9,7 @@ function showName1(name5){
         clearInterval(tId);
     }
 }
-const tId = setInterval(showName1, 1000, 'Mike');
+//const tId = setInterval(showName1, 1000, 'Mike');
 
 let num1 = 0;
 
@@ -19,4 +19,4 @@ function showTime(){
         clearInterval(tId2);
     }
 }
-const tId2 = setInterval(showTime, 1000);
+//const tId2 = setInterval(showTime, 1000);
